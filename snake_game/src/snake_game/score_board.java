@@ -6,6 +6,7 @@
 package snake_game;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import javax.swing.JPanel;
 
 /**
@@ -15,7 +16,7 @@ import javax.swing.JPanel;
 public class score_board extends JPanel{
     //constructor of class 
     score_board(){
-        setBounds(0, 584, 584, 77);//setzises
-        setBackground(Color.white);// set color
+        this.setPreferredSize(new Dimension(600, 150));
+        this.setBackground(Color.BLACK);
     }
 }
