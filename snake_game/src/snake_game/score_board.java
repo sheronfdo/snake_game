@@ -13,8 +13,9 @@ import javax.swing.JPanel;
  * @author Jamit
  */
 public class score_board extends JPanel{
+    //constructor of class 
     score_board(){
-        setBounds(0, 584, 584, 77);
-        setBackground(Color.white);
+        setBounds(0, 584, 584, 77);//setzises
+        setBackground(Color.white);// set color
     }
 }

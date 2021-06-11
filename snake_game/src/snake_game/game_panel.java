@@ -13,10 +13,10 @@ import javax.swing.JPanel;
  * @author Jamit
  */
 public class game_panel extends JPanel {
-
+    //constructor of class 
     public game_panel() {
-        setBounds(0, 0, 584, 584);
-        setBackground(Color.red);
+        setBounds(0, 0, 584, 584);// set size 
+        setBackground(Color.red);//set color for panel
     }
     
 }

@@ -15,7 +15,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new main_frame();
+        new main_frame();// running main frame of game
     }
     
 }
