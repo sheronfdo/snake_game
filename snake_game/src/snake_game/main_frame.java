@@ -14,12 +14,17 @@ import javax.swing.JFrame;
 public class main_frame extends JFrame{
     //constructor of class 
     main_frame(){
-        this.setLayout(null);//create layout as null
+        this.setResizable(false);
+        this.setTitle("Cobra");
+        //this.setLayout(null);//create layout as null
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//set close operator
-        this.setBounds(1500, 0, 600, 700);//set frame visible location and size
+        //this.setBounds(1500, 0, 1000, 1000);//set frame visible location and size
         this.add(new game_panel());// add game panel to frame
-        this.add(new score_board());// add score board to frame
+        //this.add(new score_board());// add score board to frame
         this.setVisible(true);// set visibility 
+        this.pack();
+        this.setLocationRelativeTo(null);
+        
     }
     
 }
