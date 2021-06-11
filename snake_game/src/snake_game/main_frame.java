@@ -13,7 +13,12 @@ import javax.swing.JFrame;
  */
 public class main_frame extends JFrame{
     main_frame(){
-        this.setBounds(1500, 0, 600, 600);
+        this.setLayout(null);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setBounds(1500, 0, 600, 700);
+        this.add(new game_panel());
+        this.add(new score_board());
+        //this.pack();
         this.setVisible(true);
     }
     
