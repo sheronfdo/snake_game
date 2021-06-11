@@ -28,9 +28,9 @@ public class game_panel extends JPanel implements ActionListener {
 
     static final int screen_width = 600; // game screen width
     static final int screen_height = 600; // game screen height
-    static final int unit_size = 25;  // game base unit size
+    static final int unit_size = 30;  // game base unit size
     static final int game_units = (screen_width * screen_height) / unit_size;  // number of game units
-    static final int delay = 75;  // delay for timer
+    static final int delay = 200;  // delay for timer
     final int x[] = new int[game_units];  // array for store x movement data
     final int y[] = new int[game_units];  // array for store y movement data
     int body_parts = 6;  // number of body parts
@@ -67,10 +67,10 @@ public class game_panel extends JPanel implements ActionListener {
 
     public void draw(Graphics g) {
         if (running) {
-            for (int i = 0; i < screen_height / unit_size; i++) {
+            /*for (int i = 0; i < screen_height / unit_size; i++) {
                 g.drawLine(i * unit_size, 0, i * unit_size, screen_height);
                 g.drawLine(0, i * unit_size, screen_width, i * unit_size);
-            }
+            }*/
             g.setColor(Color.red);
             g.fillOval(appleX, appleY, unit_size, unit_size);
 
@@ -79,7 +79,8 @@ public class game_panel extends JPanel implements ActionListener {
                     g.setColor(Color.green);
                     g.fillRect(x[i], y[i], unit_size, unit_size);
                 } else {
-                    g.setColor(new Color(45, 180, 0));
+                    //g.setColor(new Color(45, 180, 0));
+                    g.setColor(new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255)));
                     g.fillRect(x[i], y[i], unit_size, unit_size);
                 }
             }
