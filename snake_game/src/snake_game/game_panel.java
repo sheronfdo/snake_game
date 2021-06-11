@@ -40,14 +40,18 @@ public class game_panel extends JPanel implements ActionListener{
     Timer timer; // timwe for run
     Random random; // generate random numbers
     
+    
+    // constructor
     public game_panel() {
-        random = new Random();
-        this.setPreferredSize(new Dimension(screen_width, screen_height));
-        this.setBackground(Color.BLACK);
-        this.setFocusable(true);
-        this.addKeyListener(new my_key_adapter());
-        startGame();
+        random = new Random(); 
+        this.setPreferredSize(new Dimension(screen_width, screen_height)); // preparing screen size
+        this.setBackground(Color.BLACK); // backgroud colore of game
+        this.setFocusable(true); // for get focus to listers
+        this.addKeyListener(new my_key_adapter()); // listining action
+        startGame(); // run/call start game
     }
+    
+    
     public void startGame(){
         new_apple();
         running = true;
