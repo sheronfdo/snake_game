@@ -18,7 +18,6 @@ public class main_frame extends JFrame{
         this.setBounds(1500, 0, 600, 700);
         this.add(new game_panel());
         this.add(new score_board());
-        //this.pack();
         this.setVisible(true);
     }
     
