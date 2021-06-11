@@ -17,7 +17,7 @@ import java.awt.event.KeyEvent;
 import java.util.Random;
 import javax.swing.JPanel;
 import javax.swing.Timer;
-import sun.java2d.loops.DrawLine;
+//import sun.java2d.loops.DrawLine;
 
 /**
  *
