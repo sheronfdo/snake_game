@@ -24,21 +24,21 @@ import sun.java2d.loops.DrawLine;
 public class game_panel extends JPanel implements ActionListener{
     //constructor of class 
     
-    static final int screen_width = 600;
-    static final int screen_height = 600;
-    static final int unit_size = 25;
-    static final int game_units = (screen_width*screen_height)/unit_size;
-    static final int delay = 75;
-    final int x[] =new int[game_units];
-    final int y[] =new int[game_units];
-    int body_parts = 6;
-    int apples_eaten;
-    int appleX;
-    int appleY;
-    char direction = 'R';
-    boolean running = false;
-    Timer timer;
-    Random random;
+    static final int screen_width = 600; // game screen width
+    static final int screen_height = 600; // game screen height
+    static final int unit_size = 25;  // game base unit size
+    static final int game_units = (screen_width*screen_height)/unit_size;  // number of game units
+    static final int delay = 75;  // delay for timer
+    final int x[] =new int[game_units];  // array for store x movement data
+    final int y[] =new int[game_units];  // array for store y movement data
+    int body_parts = 6;  // number of body parts
+    int apples_eaten; // number of eaten apples
+    int appleX; // apple x axis location
+    int appleY; // apple y axis location
+    char direction = 'R'; // store direction
+    boolean running = false; // store current status
+    Timer timer; // timwe for run
+    Random random; // generate random numbers
     
     public game_panel() {
         random = new Random();
