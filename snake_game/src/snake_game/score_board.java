@@ -25,15 +25,15 @@ public class score_board extends JPanel{
     score_board(){
         scores = new JLabel();
         //scores.setBounds(25, 25, 100, 50);
-        scores.setFont(new Font("Ink Free",Font.BOLD, 60));
+        scores.setFont(new Font("Ink Free",Font.BOLD, 60)); // set font as i like
         //scores.setBackground(Color.red);
-        scores.setOpaque(true);
-        this.setBounds(0, game_panel.screen_height, game_panel.screen_width, 100);
-        this.add(scores);
+        scores.setOpaque(true);// set opaqu for apply my ui design
+        this.setBounds(0, game_panel.screen_height, game_panel.screen_width, 100); //set bounds for panel (location)
+        this.add(scores); // add scores label to panel
         //this.setBackground(Color.green);
     }
     public void setscore(int i){
-        eatenapples = i;
-        scores.setText("SCORES : "+Integer.toString(eatenapples*5));
+        eatenapples = i; // reassign eaten apple count to refresh score board
+        scores.setText("SCORES : "+Integer.toString(eatenapples*5)); // display scores
     }
 }
