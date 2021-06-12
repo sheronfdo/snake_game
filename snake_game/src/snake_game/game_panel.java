@@ -26,7 +26,7 @@ public class game_panel extends JPanel implements ActionListener {
     //constructor of class 
     score_board score = new score_board();
     
-    static final int screen_width = 600; // game screen width
+    static final int screen_width = 600; // game screen width _
     static final int screen_height = 600; // game screen height
     static final int unit_size = 30;  // game base unit size
     static final int game_units = (screen_width * screen_height) / unit_size;  // number of game units
