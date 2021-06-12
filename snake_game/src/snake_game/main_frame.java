@@ -6,7 +6,6 @@
 package snake_game;
 
 import javax.swing.JFrame;
-
 /**
  *
  * @author Jamit
@@ -14,15 +13,18 @@ import javax.swing.JFrame;
 public class main_frame extends JFrame{
     //constructor of class 
     main_frame(){
+        game_panel game = new game_panel();
+        
+        
         this.setResizable(false);
         this.setTitle("Cobra");
-        //this.setLayout(null);//create layout as null
+        this.setLayout(null);//create layout as null
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//set close operator
-        //this.setBounds(1500, 0, 1000, 1000);//set frame visible location and size
-        this.add(new game_panel());// add game panel to frame
-        //this.add(new score_board());// add score board to frame
+        this.setBounds(0, 0, 616, 739);//set frame visible location and size
+        this.add(game);// add game panel to frame
+        this.add(new score_board());// add score board to frame
         this.setVisible(true);// set visibility 
-        this.pack();
+        //this.pack();
         this.setLocationRelativeTo(null);
         
     }
