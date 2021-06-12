@@ -198,12 +198,12 @@ public class game_panel extends JPanel implements ActionListener {
                         direction = 'D';
                     }
                     break;
-                case KeyEvent.VK_D:
+                case KeyEvent.VK_A:
                     if (direction != 'R') {
                         direction = 'L';
                     }
                     break;
-                case KeyEvent.VK_A:
+                case KeyEvent.VK_D:
                     if (direction != 'L') {
                         direction = 'R';
                     }
