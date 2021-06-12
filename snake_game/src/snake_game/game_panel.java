@@ -123,19 +123,18 @@ public class game_panel extends JPanel implements ActionListener {
             body_parts++;
             apples_eaten++;
             new_apple();
-            
         }
     }
 
-    public void check_collision() {
+    public void check_collision() { // check collision checkings for snake touchs its body parts or game borders 
         //check is head collides with body
-        for (int i = body_parts; i > 0; i--) {
+        for (int i = body_parts; i > 0; i--) { // body parts tocuh checking
             if ((x[0] == x[i]) && (y[0] == y[i])) {
                 running = false;
             }
         }
         //check is head touch left border
-        if (x[0] < 0) {
+        if (x[0] < 0) { 
             running = false;
         }
         //check is head touch right border
