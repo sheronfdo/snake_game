@@ -67,26 +67,26 @@ public class game_panel extends JPanel implements ActionListener {
     }
 
     public void draw(Graphics g) {
-        if (running) {
+        if (running) { // if game is running mode
             /*for (int i = 0; i < screen_height / unit_size; i++) {
                 g.drawLine(i * unit_size, 0, i * unit_size, screen_height);
                 g.drawLine(0, i * unit_size, screen_width, i * unit_size);
             }*/
-            g.setColor(Color.red);
-            g.fillOval(appleX, appleY, unit_size, unit_size);
+            g.setColor(Color.red);// set apple colour as red 
+            g.fillOval(appleX, appleY, unit_size, unit_size); // draw apple in panel with random location
 
-            for (int i = 0; i < body_parts; i++) {
-                if (i == 0) {
+            for (int i = 0; i < body_parts; i++) {// draw body parts one by one in panel components
+                if (i == 0) { // if first part(head of snake) colour is green and draw in panel
                     g.setColor(Color.green);
                     g.fillRect(x[i], y[i], unit_size, unit_size);
-                } else {
+                } else { // all other parts are can be rabdom colours 
                     //g.setColor(new Color(45, 180, 0));
                     g.setColor(new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255)));
                     g.fillRect(x[i], y[i], unit_size, unit_size);
                 }
             }
-        } else {
-            game_over(g);
+        } else { // if game is running mode false
+            game_over(g); // run game over method for stop game
         }
     }
 
