@@ -163,7 +163,7 @@ public class game_panel extends JPanel implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) { // action listern event part 
         if (running) {
             move();
             check_apple();
@@ -172,11 +172,11 @@ public class game_panel extends JPanel implements ActionListener {
         repaint();
     }
 
-    public class my_key_adapter extends KeyAdapter {
+    public class my_key_adapter extends KeyAdapter { //create class for get key listners 
 
         @Override
-        public void keyPressed(KeyEvent e) {
-            switch (e.getKeyCode()) {
+        public void keyPressed(KeyEvent e) { //keypressed override
+            switch (e.getKeyCode()) { //this will change value of dirction variable then in next step will apply that changes
                 case KeyEvent.VK_LEFT:
                     if (direction != 'R') {
                         direction = 'L';
