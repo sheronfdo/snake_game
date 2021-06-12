@@ -20,10 +20,10 @@ import static snake_game.game_panel.screen_width;
  */
 public class score_board extends JPanel{
     //constructor of class 
-    static int eatenapples;
-    JLabel scores;
+    static int eatenapples; // create variable for store count of eaten apples
+    JLabel scores; // create label for score board
     score_board(){
-        scores = new JLabel("scores");
+        scores = new JLabel();
         //scores.setBounds(25, 25, 100, 50);
         scores.setFont(new Font("Ink Free",Font.BOLD, 60));
         //scores.setBackground(Color.red);
