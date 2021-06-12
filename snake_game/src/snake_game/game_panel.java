@@ -91,29 +91,29 @@ public class game_panel extends JPanel implements ActionListener {
     }
 
     public void new_apple() {
-        score.setscore(apples_eaten);
-        appleX = random.nextInt((int) (screen_width / unit_size)) * unit_size;
-        appleY = random.nextInt((int) (screen_height / unit_size)) * unit_size;
+        score.setscore(apples_eaten); // new apple method running is apple is eaten so have to update scoe board
+        appleX = random.nextInt((int) (screen_width / unit_size)) * unit_size; // new apple x location random
+        appleY = random.nextInt((int) (screen_height / unit_size)) * unit_size; // new apple y location random
     }
 
-    public void move() {
-        for (int i = body_parts; i > 0; i--) {
-            x[i] = x[i - 1];
-            y[i] = y[i - 1];
+    public void move() { 
+        for (int i = body_parts; i > 0; i--) { //change part location for each one by one part
+            x[i] = x[i - 1]; // x location
+            y[i] = y[i - 1]; // y location
         }
 
-        switch (direction) {
-            case 'U':
-                y[0] = y[0] - unit_size;
+        switch (direction) { // change drection 
+            case 'U': // if "u" snake had to go up side 
+                y[0] = y[0] - unit_size;// so subtract unitsize from current location
                 break;
-            case 'D':
-                y[0] = y[0] + unit_size;
+            case 'D'://if "u" snake had to go down side 
+                y[0] = y[0] + unit_size;// so add unitsize from current location
                 break;
-            case 'L':
-                x[0] = x[0] - unit_size;
+            case 'L': //if "u" snake had to go left side 
+                x[0] = x[0] - unit_size; // so subtract unitsize from current location
                 break;
-            case 'R':
-                x[0] = x[0] + unit_size;
+            case 'R': //if "u" snake had to go right side 
+                x[0] = x[0] + unit_size;// so add unitsize from current location
                 break;
         }
     }
