@@ -17,7 +17,6 @@ import java.awt.event.KeyEvent;
 import java.util.Random;
 import javax.swing.JPanel;
 import javax.swing.Timer;
-//import sun.java2d.loops.DrawLine;
 
 /**
  *
@@ -56,7 +55,7 @@ public class game_panel extends JPanel implements ActionListener {
 
     public void startGame() {
         new_apple(); // call method for creating new apple location
-        running = false; // change status
+        running = true; // change status
         timer = new Timer(delay, this); // initialize timer
         timer.start(); // start timer
     }
@@ -92,6 +91,7 @@ public class game_panel extends JPanel implements ActionListener {
     }
 
     public void new_apple() {
+        score.setscore(apples_eaten);
         appleX = random.nextInt((int) (screen_width / unit_size)) * unit_size;
         appleY = random.nextInt((int) (screen_height / unit_size)) * unit_size;
     }
@@ -123,6 +123,7 @@ public class game_panel extends JPanel implements ActionListener {
             body_parts++;
             apples_eaten++;
             new_apple();
+            
         }
     }
 
