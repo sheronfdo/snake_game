@@ -45,7 +45,8 @@ public class game_panel extends JPanel implements ActionListener {
     // constructor
     public game_panel() {
         random = new Random();
-        this.setPreferredSize(new Dimension(screen_width, screen_height)); // preparing screen size
+        this.setBounds(0, 0, screen_width, screen_height);
+        //this.setPreferredSize(new Dimension(screen_width, screen_height)); // preparing screen size
         this.setBackground(Color.BLACK); // backgroud colore of game
         this.setFocusable(true); // for get focus to listers
         this.addKeyListener(new my_key_adapter()); // listining action
@@ -54,7 +55,7 @@ public class game_panel extends JPanel implements ActionListener {
 
     public void startGame() {
         new_apple(); // call method for creating new apple location
-        running = true; // change status
+        running = false; // change status
         timer = new Timer(delay, this); // initialize timer
         timer.start(); // start timer
     }
