@@ -118,7 +118,7 @@ public class game_panel extends JPanel implements ActionListener {
         }
     }
 
-    public void check_apple() {
+    public void check_apple() { //check apple and snake head location if both locations are same it means snake eat an apple 
         if ((x[0] == appleX) && (y[0] == appleY)) {
             body_parts++;
             apples_eaten++;
