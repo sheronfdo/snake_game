@@ -20,7 +20,7 @@ public class main_frame extends JFrame{
         this.setTitle("Cobra"); // set title for programme
         this.setLayout(null);//create layout as null
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//set close operator
-        this.setBounds(1500, 0, 616, 739);//set frame visible location and size
+        this.setBounds(0, 0, 616, 739);//set frame visible location and size
         this.add(game);// add game panel to frame
         this.add(score);// add score board to frame
         this.setVisible(true);// set visibility 
